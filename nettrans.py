@@ -13,13 +13,13 @@ class nettrans:
     def modeSelect(self, x):
         self.mode=int(x)
 
-    def createConnection( ):
+    def createConnection(self):
         client = paramiko.SSHClient()
         client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
         client.connect(ip, username=uname, password=pw)
         ftp=client.open_sftp( )
 
-    def getFile( ):
+    def getFile(self):
         sam=[];
         raw=[];
         dt=[];
@@ -78,7 +78,7 @@ class nettrans:
                 ftp.get(raw[i],resultfile)
 
 
-    def closeConnection( ):
+    def closeConnection(self):
         client.close( )
         ftp.close( )
 
