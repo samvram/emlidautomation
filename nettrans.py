@@ -8,7 +8,7 @@ class nettrans:
        While creation you need to specify IP, Username and Password 
        of the client from whom you want the files.
        
-       example use:
+       example usage ::
              nettrans sam('192.168.3.145','root','emlidreach')
           
        Various modes of operation:
@@ -16,19 +16,19 @@ class nettrans:
        Mode all - Fetch all the files present in ~/logs folder
        Mode raws - Fetch all the RAW files in the ~/logs folder
 
-       example use:
+       example usage ::
              nettrans sam('192.168.3.145','root','emlidreach')
              sam.create_connection( )
              sam.mode_select('all')
 
        The file transfer occurs once we implement the above
        
-       example use:
+       example usage::
              sam.get_file( )
 
        You must close all connections made during the operation
 
-       example use:
+       example usage ::
              sam.close_connection( )
        
        More modes to come soon
